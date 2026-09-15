@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+.pytest_cache/
+.mypy_cache/
+.vscode/
+.idea/
+*.mp3
+*.waw
+*.loosles
+pylintrc.txt
+.pylintrc
+venv/
