@@ -292,17 +292,23 @@ class LinkedList:
 
         return data
 
-    def __str__(self) -> str:
+    def _return_str(self) -> str:
         """
-        return text interpretation of linked list like:
-        <- element_1 -> <- element_2 -> ... -> <- element_n ->
+        auxiliary function than uses in magical methods __str__ and __repr__
         """
         string = ""
 
         for el in self:
             string += "<- " + str(el) + " -> "
-
+        
         return string
+
+    def __str__(self) -> str:
+        """
+        return text interpretation of linked list like:
+        <- element_1 -> <- element_2 -> ... -> <- element_n ->
+        """
+        return self._return_str()
 
     def __repr__(self) -> str:
         """
@@ -310,9 +316,5 @@ class LinkedList:
         <- element_1 -> <- element_2 -> ... -> <- element_n ->
         support nested structure
         """
-        string = ""
 
-        for el in self:
-            string += "<- " + str(el) + " -> "
-
-        return string
+        return self._return_str()

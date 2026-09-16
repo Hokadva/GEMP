@@ -22,7 +22,7 @@ class PlayList(LinkedList):
 
         return self._current_item.data
 
-    def play_all(self, item: str) -> Composition:
+    def play_all(self, item: Composition) -> Composition:
         """
         Return current composition, or set composition as first when current = None
         """
